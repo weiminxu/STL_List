@@ -17,9 +17,9 @@ int main()
 	list<int> b;
 
 	b.push_back(0);
+	b.push_back(8);
 	b.push_back(1);
-	b.push_back(2);
-	b.push_back(3);
+	b.push_back(6);
 
 	PrintListContents(b);
 
@@ -57,12 +57,19 @@ int main()
 	cout << endl << endl;
 
 	//a.erase(a.begin(), iElementValueTwo);//from [0~iElementValueTwo) all were delete
-	a.erase(iElementValueTwo, a.end());//from [iEmentValueTwo, a.end) all were delete
+	//a.erase(iElementValueTwo, a.end());//from [iEmentValueTwo, a.end) all were delete
 	//a.erase(iElementValueTwo);//only iElementValueTwo was delete
-	cout << "result: ";
-	PrintListContents(a);
+	//cout << "result: " << endl;
+	//PrintListContents(a);
 
+	//cout << endl << endl;
+	PrintListContents(b);
+	b.reverse();
+	b.sort();
+	cout << endl << endl;
+	PrintListContents(b);
 
+	cout << "result: " << endl;
 }
 
 void PrintListContents(const list<int>& listInput)
