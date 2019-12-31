@@ -50,9 +50,19 @@ int main()
 		cout <<"a["<<offset<<"]= "<< *iter << endl;
 	}
 
-	a.insert(a.begin(), b.begin(), b.end());
+	list<int>::iterator iElementValueTwo;
+	iElementValueTwo = a.insert(a.begin(), b.begin(), b.end());
 	//a.insert(iter, ++b.begin(), --b.end());
 	PrintListContents(a);
+	cout << endl << endl;
+
+	//a.erase(a.begin(), iElementValueTwo);//from [0~iElementValueTwo) all were delete
+	a.erase(iElementValueTwo, a.end());//from [iEmentValueTwo, a.end) all were delete
+	//a.erase(iElementValueTwo);//only iElementValueTwo was delete
+	cout << "result: ";
+	PrintListContents(a);
+
+
 }
 
 void PrintListContents(const list<int>& listInput)
